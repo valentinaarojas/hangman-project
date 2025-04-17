@@ -1,0 +1,31 @@
+.btn {
+    width: 100%;
+    border: 3px solid black;
+    background: none;
+    aspect-ratio: 1 / 1; /* for square buttons */
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    padding: 2.5px;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+}
+
+/* using css file for the buttons since hover / focus features
+can't be done without using javascript (if not implementing css) */
+
+.btn.active {
+    background-color: hsl(200, 100%, 50%);
+}
+
+.btn.inactive {
+    opacity: .3;
+}
+
+/* :not(:disabled) - makes it so that bg color doesn't appear when 
+letter button has already been clicked */
+
+.btn:hover:not(:disabled),
+.btn:focus:not(:disabled) {
+    background-color: hsl(200, 100%, 75%);
+}
